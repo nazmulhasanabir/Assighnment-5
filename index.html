@@ -17,7 +17,7 @@
       <div
         class="flex justify-between items-center gap-10 pt-6 px-32 pb-6 bg-[#F9F7F3]"
       >
-        <button class="btn bg-[#b4f461] text-xl font-semibold">Blog</button>
+        <button id="blog-btn" class=" btn bg-[#b4f461] text-xl font-semibold">Blog</button>
         <!-- middle logo -->
         <div class="flex items-center space-x-4">
           <img src="assets/logo.png" />
@@ -26,25 +26,27 @@
         <!-- balance -->
         <div class="flex items-center space-x-3">
           <img src="assets/coin.png" alt="" />
-          <div id="main_balance" class="text-xl font-semibold">550 BDT</div>
+          <div class="flex">
+            <div id="main_balance" class="text-xl font-semibold">550</div>
+            <p class="text-xl font-semibold">BDT</p>
+          </div>
         </div>
       </div>
       <div class="flex justify-center gap-5 mt-11">
-        <button
-          class="w-[160px]  rounded-lg bg-[#b4f461] text-xl font-semibold"
-        >
+        <button id="donation-form-btn" class="w-[160px] rounded-lg bg-[#b4f461] text-xl font-semibold">
           Donation
         </button>
-        <button
+        <button id="history-form-btn"
           class="w-[160px] h-10 rounded-lg bg-[#b4f461] text-xl font-semibold"
         >
           History
         </button>
       </div>
     </div>
-    <!-- 2nd -->
-    <section class="mx-auto w-10/12 mt-5">
-      <!-- container part -->
+    <!-- navbar part close  -->
+    <!-- 2nd part -->
+    <section id="container-form" class="mx-auto w-10/12 mt-5">
+      <!--noakhali container part -->
       <section
         class="md:flex p-8 gap-8 rounded-2xl border-2 border-solid border-stone-200"
       >
@@ -59,7 +61,10 @@
             class="flex items-center space-x-3 px-4 py-2 bg-[#1111110D] h-11 w-[160px] rounded-lg"
           >
             <img src="assets/coin.png" alt="" />
-            <div id="flood-1-blnce" class="text-xl font-semibold">110 BDT</div>
+            <div class="flex">
+              <div id="flood-1-blnce" class="text-xl font-semibold">110</div>
+              <p class="text-xl font-semibold">BDT</p>
+            </div>
           </div>
           <!--            text section -->
           <div class="">
@@ -76,13 +81,16 @@
                 the lives of those in need.
               </p>
             </div>
-            <input id="donation-value-1"
+            <input
+              id="donation-value-1"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered md:w-full my-4"
             />
-            <button id="donation-btn-1"
-              class="btn btn-wide bg-[#b4f461] text-xl font-semibold  w-full my-4"
+            <button
+              id="donation-btn-1"
+              onclick="my_modal_1.showModal()"
+              class="btn btn-wide bg-[#b4f461] text-xl font-semibold w-full my-4"
             >
               Donate Now
             </button>
@@ -106,8 +114,12 @@
             class="flex items-center space-x-3 px-4 py-2 bg-[#1111110D] h-11 w-[160px] rounded-lg"
           >
             <img src="assets/coin.png" alt="" />
-            <div class="text-xl font-semibold">660 BDT</div>
+            <div class="flex">
+              <div id="flood-2-blnce" class="text-xl font-semibold">660</div>
+              <p class="text-xl font-semibold">BDT</p>
+            </div>
           </div>
+
           <!--            text section -->
           <div class="">
             <h2 class="font-bold text-xl my-4">
@@ -126,11 +138,13 @@
               </p>
             </div>
             <input
+              id="donation-value-2"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered md:w-full my-4"
             />
             <button
+              id="donation-btn-2"
               class="btn btn-wide bg-[#b4f461] text-xl font-semibold md:w-full my-4"
             >
               Donate Now
@@ -155,10 +169,13 @@
             class="flex items-center space-x-3 px-4 py-2 bg-[#1111110D] h-11 w-[160px] rounded-lg"
           >
             <img src="assets/coin.png" alt="" />
-            <div class="text-xl font-semibold">2400 BDT</div>
+            <div class="flex">
+              <div id="injured-blnce" class="text-xl font-semibold">2400</div>
+              <p class="text-xl font-semibold">BDT</p>
+            </div>
           </div>
           <!--            text section -->
-          <div >
+          <div>
             <h2 class="font-bold text-xl my-4">
               Aid for Injured in the Quota Movement
             </h2>
@@ -175,12 +192,12 @@
                 brave individuals in their time of need.
               </p>
             </div>
-            <input
+            <input id="donation-value-3"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered md:w-full my-4"
             />
-            <button
+            <button id="donation-btn-3"
               class="btn btn-wide bg-[#b4f461] text-xl font-semibold md:w-full my-4"
             >
               Donate Now
@@ -191,28 +208,51 @@
       <!-- quota part finished -->
     </section>
     <!-- popup section -->
-     <section id="Popup">
-        <div class="mx-auto w-1/3 h-80  bg-[#1111110D] rounded-2xl flex items-center justify-center ">
-           <div class="h-5/6 text-center">
+ <!-- pop up -->
+ <dialog id="my_modal_1" class="modal mx-auto w-1/3  bg-[#1111110D] rounded-2xl flex items-center justify-center">
+  <div class="modal-box">
+<section id="Popup"  >
+        <div>
+          <div class="h-5/6 text-center">
             <h2 class="text-5xl font-bold">Congrates!</h2>
-            <div class="mx-auto w-8 my-5"> <img  src="assets/coin.png" alt=""></div>
+            <div class="mx-auto w-8 my-5">
+              <img src="assets/coin.png" alt="" />
+            </div>
             <p class="my-4">You Donated for HumanKind</p>
             <h2 class="text-3xl font-bold my-4">Successfully</h2>
-            <button class="btn btn-active btn-ghost">Close Confirmation</button>
-           </div>
+            </div>
         </div>
-     </section>
-    
+      </section>
+ <div class="modal-action mr-32">
+      <form method="dialog">
+  <button class="btn btn-active btn-ghost">Close Confirmation</button>
+        </form>
+  </div>
+</dialog>
 
 
-
+    <!-- <section id="Popup">
+      <div
+        class="mx-auto w-1/3 h-80 bg-[#1111110D] rounded-2xl flex items-center justify-center"
+      >
+        <div class="h-5/6 text-center">
+          <h2 class="text-5xl font-bold">Congrates!</h2>
+          <div class="mx-auto w-8 my-5">
+            <img src="assets/coin.png" alt="" />
+          </div>
+          <p class="my-4">You Donated for HumanKind</p>
+          <h2 class="text-3xl font-bold my-4">Successfully</h2>
+          <button class="btn btn-active btn-ghost">Close Confirmation</button>
+        </div>
+      </div>
+    </section> -->
 
     <!--blog   section -->
-    <section class="mx-auto w-10/12 mt-5">
+    <section id="blog-form" class="mx-auto w-10/12 mt-5">
       <div>
         <h2 class="text-5xl font-black mb-4">Import FAQ</h2>
       </div>
-      <div >
+      <div>
         <div class="collapse collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" checked="checked" />
           <div class="collapse-title text-xl font-medium">
@@ -234,14 +274,24 @@
             How do you select an element form the (DOM)?
           </div>
           <div class="collapse-content">
-            <p>Using getElementById: The getElementById method allows you to select an element by its ID. <br>
-               1.Using getElementsByClassName: <br>
-                2.Using getElementsByTagName: <br>
-                3.Using querySelector: <br>
-                4.Using querySelectorAll: <br>
-                5.Changing the Text Content. <br>
-                6.Changing the HTML Content. <br>
-                7.Changing the Attribute Value.</p>
+            <p>
+              Using getElementById: The getElementById method allows you to
+              select an element by its ID.
+              <br />
+              1.Using getElementsByClassName:
+              <br />
+              2.Using getElementsByTagName:
+              <br />
+              3.Using querySelector:
+              <br />
+              4.Using querySelectorAll:
+              <br />
+              5.Changing the Text Content.
+              <br />
+              6.Changing the HTML Content.
+              <br />
+              7.Changing the Attribute Value.
+            </p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200">
@@ -267,22 +317,22 @@
           </div>
           <div class="collapse-content">
             <p>
-              Manipulating Element Attributes The classList
-              object only provide methods to change the class of an element. If
-              you want to change other attributes like id , href , or src , you
-              can use the setAttribute() method. The setAttribute() method
-              accepts two arguments: The name of the attribute to set
+              Manipulating Element Attributes The classList object only provide
+              methods to change the class of an element. If you want to change
+              other attributes like id , href , or src , you can use the
+              setAttribute() method. The setAttribute() method accepts two
+              arguments: The name of the attribute to set
             </p>
           </div>
         </div>
       </div>
     </section>
     <!-- blog section finished -->
-     <!-- transection part -->
-      <section>
-        <div class="transection"></div>
-      </section>
-     <script src="js file/index.js"></script>
-     <script src="js file/function.js"></script>
+    <!-- transection part -->
+    <section>
+      <div id="history-form" class="transection"></div>
+    </section>
+    <script src="js file/index.js"></script>
+    <script src="js file/function.js"></script>
   </body>
 </html>

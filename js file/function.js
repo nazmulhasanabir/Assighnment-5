@@ -1,6 +1,8 @@
+
 function getIlimentByInput(id){
     const addedValue = document.getElementById(id).value;
     const AddedNumber = parseFloat(addedValue);
+   
     return AddedNumber;
 
 }
@@ -12,10 +14,10 @@ function GetIlimentByDiv(id){
 
 
 function GetSelectetForm (id){
-    document.getElementById('cashIn-form').classList.add('hidden');
-    document.getElementById('Cashout-form').classList.add('hidden');
-    document.getElementById('transection-form').classList.add('hidden');
-     
+    document.getElementById('container-form').classList.add('hidden');
+    document.getElementById('Popup').classList.add('hidden');
+    document.getElementById('blog-form').classList.add('hidden');
+     document.getElementById('history-form').classList.add('hidden')
     document.getElementById(id).classList.remove('hidden')
 }
 
