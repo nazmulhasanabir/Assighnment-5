@@ -69,7 +69,7 @@ document.getElementById('donation-btn-2').addEventListener('click',function(){
 // history 
 const div = document.createElement('div');
 div.innerHTML=`<div class= "border-2 rounded-2xl my-6 mx-auto w-4/5 text-center">
-<p class="font-bold text-xl my-4"> ${donation_1} donated for ${places}</p>
+<p class="font-bold text-xl my-4"> ${donation_2} donated for ${places}</p>
 <p class="font-bold text-xl my-4">Date:${d}</p>
 </div>`
 
@@ -102,6 +102,23 @@ document.getElementById('main_balance').innerText =minus
 const balance= donation_3 + injuredBlnce
 document.getElementById('injured-blnce').innerText = balance
 alert('thank you')
+
+
+// time
+const places =document.getElementById('quota-text').innerText;
+const d = new Date();
+d.setFullYear(2024);
+
+// history 
+const div = document.createElement('div');
+div.innerHTML=`<div class= "border-2 rounded-2xl my-6 mx-auto w-4/5 text-center">
+<p class="font-bold text-xl my-4"> ${donation_3} donated for ${places}</p>
+<p class="font-bold text-xl my-4">Date:${d}</p>
+</div>`
+
+document.getElementById('history-form').appendChild(div)
+
+
 
 })
 // quta part close
