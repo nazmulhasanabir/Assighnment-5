@@ -1,7 +1,7 @@
 document.getElementById('donation-btn-1').addEventListener('click',function(){
    const donation_1 = getIlimentByInput('donation-value-1');
    const flood_blnc_1 = GetIlimentByDiv('flood-1-blnce');
-   const balance_minus = GetIlimentByDiv('main_balance')
+   const balance_minus = GetIlimentByDiv('main_balance');
 
   if(isNaN(donation_1) || donation_1<=0){
     alert('invaild donation amount')
@@ -17,11 +17,23 @@ document.getElementById('donation-btn-1').addEventListener('click',function(){
   document.getElementById('main_balance').innerText =minus
 
   const balance= donation_1 + flood_blnc_1
-  document.getElementById('flood-1-blnce').innerText = balance
-  const popup = document.getElementById('my_modal_1')
-  // alert('thank you')
-  return(popup)
- 
+  document.getElementById('flood-1-blnce').innerText = balance;
+
+  
+//  time
+const places =document.getElementById('noakhali-text').innerText;
+  const d = new Date();
+  d.setFullYear(2024);
+
+// history 
+const div = document.createElement('div');
+div.innerHTML=`<div class= "border-2 rounded-2xl my-6 mx-auto w-4/5 text-center">
+<p class="font-bold text-xl my-4"> ${donation_1} donated for ${places}</p>
+<p class="font-bold text-xl my-4">Date:${d}</p>
+</div>`
+
+document.getElementById('history-form').appendChild(div)
+
 })
 
 // noakhali part close
@@ -49,6 +61,22 @@ document.getElementById('donation-btn-2').addEventListener('click',function(){
   document.getElementById('flood-2-blnce').innerText = balance
   alert('thank you')
   
+// time
+  const places =document.getElementById('feni-text').innerText;
+  const d = new Date();
+  d.setFullYear(2024);
+
+// history 
+const div = document.createElement('div');
+div.innerHTML=`<div class= "border-2 rounded-2xl my-6 mx-auto w-4/5 text-center">
+<p class="font-bold text-xl my-4"> ${donation_1} donated for ${places}</p>
+<p class="font-bold text-xl my-4">Date:${d}</p>
+</div>`
+
+document.getElementById('history-form').appendChild(div)
+
+
+
 })
 // feni part close 
 
