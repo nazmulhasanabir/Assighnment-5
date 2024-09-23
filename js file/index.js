@@ -3,6 +3,10 @@ document.getElementById('donation-btn-1').addEventListener('click',function(){
    const flood_blnc_1 = GetIlimentByDiv('flood-1-blnce');
    const balance_minus = GetIlimentByDiv('main_balance');
 
+
+
+
+
   if(isNaN(donation_1) || donation_1<=0){
     alert('invaild donation amount')
     return;
@@ -133,10 +137,22 @@ document.getElementById('history-form').appendChild(div)
 document.getElementById('blog-btn').addEventListener('click',function(){
   GetSelectetForm('blog-form')
 })
+
+
 // donation section
+
 document.getElementById('donation-form-btn').addEventListener('click', function(){
-  GetSelectetForm('container-form')
+  // button_1.classList.toggle('bg-[#b4f461]')
+  GetSelectetForm('container-form');
+  setBtn_1('donation-form-btn');
 })
 document.getElementById('history-form-btn').addEventListener('click', function(){
   GetSelectetForm('history-form')
+  setBtn_2('history-form-btn')
 })
+
+
+// color challenge part
+
+
+
