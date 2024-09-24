@@ -12,10 +12,10 @@ document
 
     if (balance_minus > donation_1) {
       const minus = balance_minus - donation_1;
-      document.getElementById("main_balance").innerText = minus;
+      document.getElementById("main_balance").innerText = minus.toFixed(2);
 
       const balance = donation_1 + flood_blnc_1;
-      document.getElementById("flood-1-blnce").innerText = balance;
+      document.getElementById("flood-1-blnce").innerText = balance.toFixed(2);
 
       my_modal_1.showModal();
     } else {
@@ -55,10 +55,10 @@ document
 
     if (minus_balance > donation_2) {
       const minus = minus_balance - donation_2;
-      document.getElementById("main_balance").innerText = minus;
+      document.getElementById("main_balance").innerText = minus.toFixed(2);
 
       const balance = donation_2 + flood_blnc_2;
-      document.getElementById("flood-2-blnce").innerText = balance;
+      document.getElementById("flood-2-blnce").innerText = balance.toFixed(2);
 
       my_modal_1.showModal();
     } else {
@@ -97,10 +97,10 @@ document
 
     if (minus_balance > donation_3) {
       const minus = minus_balance - donation_3;
-      document.getElementById("main_balance").innerText = minus;
+      document.getElementById("main_balance").innerText = minus.toFixed(2);
 
       const balance = donation_3 + injuredBlnce;
-      document.getElementById("injured-blnce").innerText = balance;
+      document.getElementById("injured-blnce").innerText = balance.toFixed(2);
 
       my_modal_1.showModal();
     } else {
