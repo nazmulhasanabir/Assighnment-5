@@ -19,7 +19,7 @@ function GetSelectetForm(id) {
 }
 function ContainerForm(id) {
   document.getElementById("container-form").classList.add("hidden");
-  document.getElementById("Popup").classList.add("hidden");
+  document.getElementById("Popup").classList.remove("hidden");
   document.getElementById("blog-form").classList.add("hidden");
   document.getElementById("history-form").classList.add("hidden");
   document.getElementById(id).classList.remove("hidden");
