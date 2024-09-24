@@ -5,7 +5,8 @@ document
     const flood_blnc_1 = GetIlimentByDiv("flood-1-blnce");
     const balance_minus = GetIlimentByDiv("main_balance");
 
-    if (!Number(donation_1) || donation_1 <= 0) {
+    if (isNaN(donation_1) || donation_1 <= 0) {
+      document.getElementById('donation-value-1').value='';
       my_modal_3.showModal();
       return;
     }
@@ -16,9 +17,10 @@ document
 
       const balance = donation_1 + flood_blnc_1;
       document.getElementById("flood-1-blnce").innerText = balance.toFixed(2);
-
+      document.getElementById('donation-value-1').value='';
       my_modal_1.showModal();
     } else {
+      document.getElementById('donation-value-1').value='';
       my_modal_2.showModal();
       return;
     }
@@ -48,7 +50,8 @@ document
     const flood_blnc_2 = GetIlimentByDiv("flood-2-blnce");
     const minus_balance = GetIlimentByDiv("main_balance");
 
-    if (!Number(donation_2) || donation_2 <= 0) {
+    if (isNaN(donation_2) || donation_2 <= 0) {
+      document.getElementById('donation-value-2').value= '';
       my_modal_3.showModal();
       return;
     }
@@ -59,9 +62,10 @@ document
 
       const balance = donation_2 + flood_blnc_2;
       document.getElementById("flood-2-blnce").innerText = balance.toFixed(2);
-
+      document.getElementById('donation-value-2').value= '';
       my_modal_1.showModal();
     } else {
+      document.getElementById('donation-value-2').value= '';
       my_modal_2.showModal();
       return;
     }
@@ -90,7 +94,8 @@ document
     const injuredBlnce = GetIlimentByDiv("injured-blnce");
     const minus_balance = GetIlimentByDiv("main_balance");
 
-    if (!Number(donation_3) || donation_3 <= 0) {
+    if (isNaN(donation_3) || donation_3 <= 0) {
+      document.getElementById('donation-value-3').value=''
       my_modal_3.showModal();
       return;
     }
@@ -101,9 +106,10 @@ document
 
       const balance = donation_3 + injuredBlnce;
       document.getElementById("injured-blnce").innerText = balance.toFixed(2);
-
+      document.getElementById('donation-value-3').value=''
       my_modal_1.showModal();
     } else {
+      document.getElementById('donation-value-3').value=''
       my_modal_2.showModal();
       return;
     }
@@ -135,6 +141,7 @@ document.getElementById("blog-btn").addEventListener("click", function () {
 document.getElementById("blog-home-btn").addEventListener("click", function () {
   ContainerForm("container-form");
   calledBtn("blog-btn");
+  setBtn_1("donation-form-btn");
   document.getElementById("topper_btn").classList.remove("hidden");
 });
 
