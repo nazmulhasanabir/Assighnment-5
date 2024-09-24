@@ -20,6 +20,13 @@ function GetSelectetForm (id){
      document.getElementById('history-form').classList.add('hidden')
     document.getElementById(id).classList.remove('hidden')
 }
+function ContainerForm (id){
+    document.getElementById('container-form').classList.add('hidden');
+    document.getElementById('Popup').classList.add('hidden');
+    document.getElementById('blog-form').classList.add('hidden');
+     document.getElementById('history-form').classList.add('hidden')
+    document.getElementById(id).classList.remove('hidden')
+}
 
 
 
@@ -48,3 +55,10 @@ function setBtn_1(id){
     btn_2.classList.add('bg-[#b4f461]')
   }
   
+
+  function calledBtn(id){
+      document.getElementById('blog-btn').classList.add('hidden');
+      document.getElementById('blog-home-btn').classList.add('hidden');
+      
+    document.getElementById(id).classList.remove('hidden');
+  }

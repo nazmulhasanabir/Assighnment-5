@@ -16,6 +16,7 @@ document.getElementById('donation-btn-1').addEventListener('click',function(){
     alert('You have not enough balance')
     return
   }
+  
  
   const minus= balance_minus - donation_1
   document.getElementById('main_balance').innerText =minus
@@ -64,6 +65,9 @@ document.getElementById('donation-btn-2').addEventListener('click',function(){
   const balance= donation_2 + flood_blnc_2
   document.getElementById('flood-2-blnce').innerText = balance
   alert('thank you')
+
+
+
   
 // time
   const places =document.getElementById('feni-text').innerText;
@@ -132,11 +136,20 @@ document.getElementById('history-form').appendChild(div)
 
 
 
-// button section
+//blog button section
 
 document.getElementById('blog-btn').addEventListener('click',function(){
-  GetSelectetForm('blog-form')
+  GetSelectetForm('blog-form');
+  calledBtn('blog-home-btn');
+document.getElementById('topper_btn').classList.add('hidden');
 })
+
+document.getElementById('blog-home-btn').addEventListener('click', function(){
+  ContainerForm('container-form');
+  calledBtn('blog-btn');
+  document.getElementById('topper_btn').classList.remove('hidden');
+})
+
 
 
 // donation section
